@@ -5,8 +5,8 @@ const MongoLib = require('../lib/mongo')
 * product
 * import the shema
 */
-const products = require('../models/product')
-const product = require('../models/product')
+//const products = require('../models/product')
+//const product = require('../models/product')
 
 class ProductsService {
     constructor() {
@@ -25,20 +25,32 @@ class ProductsService {
         return products || []
     }
 
-    getProduct( { productId } ) {
-        return Promise.resolve( productsMocks[productId] )
+    async getProduct( { productId } ) {
+        const product = await this.mongoDB.get(this.collection, productId)
+        return product || {}
+        //return Promise.resolve( productsMocks[productId] )
     }
 
-    createProduct( { product } ) {
-        return Promise.resolve( productsMocks[product] )
+    async createProduct({ product }) {
+        const createProductId = await this.mongoDB.create(this.collection, product)
+        return createProductId
     }
-
-    updateProduct( { productId, product } ) {
-        return Promise.resolve( productsMocks[0] )
+    
+    async updateProduct({ productId, product }) {
+        const updateProductId = await this.mongoDB.update(
+            this.collection,
+            productId,
+            product
+        )    
+        return updateProductId
     }
-
-    deleteProduct( { productId } ) {
-        return Promise.resolve( productsMocks[productId] )
+    
+    async deleteProduct({ productId }) {
+        const deletedProductId = await this.mongoDB.delete(
+            this.collection,
+            productId
+        )    
+        return deletedProductId;
     }
 }
 

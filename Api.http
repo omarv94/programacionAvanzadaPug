@@ -12,23 +12,23 @@ POST http://localhost:3000/api/products HTTP/1.1
 Content-Type: application/json
     
 {
-    "name": "Movil",
-    "price": 650,
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71ymvpboThL._AC_SX466_.jpg",    
-    "tags": ["expensive", "black"]
+    "name": "Raquet",
+    "price": 320,
+    "category": "Sport",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71ymvpboThL._AC_SX466_.jpg"    
 }
 
 ###
-PUT http://localhost:3000/api/products/5f999c63178bb22c0a572e99 HTTP/1.1
+PUT http://localhost:3000/api/products/5fc5b05e5416ca2776f59074 HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Shoes",
-    "price": 1200,
-    "category": "home",
-    "image": "zapatos.jpg"
+    "name": "Raquet",
+    "price": 320,
+    "category": "Sport",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.-g3YirRFmtSw4vWNobFDngHaH2&pid=Api&P=0&w=300&h=300"
 }
 
 ###
-DELETE http://localhost:3000/api/products/5f999f86226f612d759c752f HTTP/1.1
+DELETE http://localhost:3000/api/products/5fc5b7b424bbbb2b32e1aa00 HTTP/1.1
 Content-Type: application/json
