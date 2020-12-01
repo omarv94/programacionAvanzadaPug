@@ -10,7 +10,7 @@ Content-Type: application/json
 ###
 POST http://localhost:3000/api/products HTTP/1.1
 Content-Type: application/json
-
+    
 {
     "name": "Movil",
     "price": 650,
