@@ -10,4 +10,6 @@ const config = {
     dbName: process.env.DB_NAME
 }
 
-module.exports = { config }
+module.exports = {
+    config
+}

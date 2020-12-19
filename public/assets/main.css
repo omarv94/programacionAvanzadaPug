@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #d31a1a;
-  --primary-color-darker: #bf0908;
+  --primary-color: #4d4925;
+  --primary-color-darker: #395066;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 .main-hero {
   position: relative;
-  background: url("/static/images/hero-bg.jpg");
+  background: url("/static/images/fondo.jpg");
   background-size: cover;
   background-position: center bottom;
 }
@@ -28,7 +28,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(124, 126, 2, 0.52);
 }
 
 .logo {
